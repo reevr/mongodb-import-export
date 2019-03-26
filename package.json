@@ -1,0 +1,15 @@
+{
+  "name": "mongodb-import-export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^1.7.0",
+    "mongodb": "^3.2.2"
+  }
+}
