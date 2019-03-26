@@ -49,7 +49,8 @@ function functions(connection) {
           worksheet.addRow(row);
         }
       }
-      workbook.xlsx.writeFile((new Date).toDateString() + ".xlsx")
+      const filename = (new Date).toISOString() + ".xlsx"
+      workbook.xlsx.writeFile('./output/' + filename)
         .then(function () {
           resolve(true);
         }).catch(err => reject(err));
