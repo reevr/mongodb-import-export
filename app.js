@@ -20,4 +20,4 @@ async function boot() {
   mongoUtil.export('absentia', 'fbtargetings');
 }
 
-boot();
+boot().then(() => console.log('done'));

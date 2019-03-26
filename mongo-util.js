@@ -50,8 +50,9 @@ function functions(connection) {
           worksheet.addRow(row);
         }
       }
-      const filename = (new Date).toISOString() + ".xlsx"
-      workbook.xlsx.writeFile(path.join(__dirname, './output', filename))
+      const filename = +(new Date) + ".xlsx"
+      const filePath = path.join(__dirname, './output', filename)
+      workbook.xlsx.writeFile(filePath)
         .then(function () {
           resolve(true);
         }).catch(err => reject(err));
