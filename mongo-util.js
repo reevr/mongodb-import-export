@@ -1,4 +1,5 @@
 var Excel = require('exceljs');
+var path = require('path');
 
 function functions(connection) {
 
@@ -50,7 +51,7 @@ function functions(connection) {
         }
       }
       const filename = (new Date).toISOString() + ".xlsx"
-      workbook.xlsx.writeFile('./output/' + filename)
+      workbook.xlsx.writeFile(path.join(__dirname, './output', filename))
         .then(function () {
           resolve(true);
         }).catch(err => reject(err));
