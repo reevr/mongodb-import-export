@@ -14,7 +14,7 @@ function connect(url) {
   })
 }
 
-async function boot(type, dbName, collection, filePath, url = 'mongodb://localhost:27017') {
+async function boot(type, dbName, collection, filePath, url = 'mongodb://user:absentia@13.233.1.205:27017/?authSource=absentia') {
   const connection = await connect(url)
   var mongoUtil = require('./mongo-util')(connection);
 

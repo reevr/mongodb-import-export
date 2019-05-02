@@ -140,6 +140,7 @@ function mongoUtility(connection) {
   }
 
   function createWorksheet(data) {
+    console.log(data);
     return new Promise((resolve, reject) => {
       var workbook = new Excel.Workbook();
       var worksheet = workbook.addWorksheet('export-data');
